@@ -16,22 +16,30 @@
 
 </head>
 <body>
-        <div class="grid grid-cols-1 justify-center h-screen bg-[var(--shape-body)] md:grid-cols-2  ">
+        <div class="grid grid-cols-1 justify-center h-auto bg-shape-body md:grid-cols-[400px_1fr] md:h-screen md:overflow-hidden">
 
-            <aside class="flex items-center	justify-center p-4 bg-[var(--shape-background)] h-screen box-border">
-                <div class="flex flex-col w-full h-full py-10 px-8 bg-[var(--shape-body)] rounded-xl	bg-[url('../assets/Background.png')] bg-contain	bg-no-repeat bg-bottom box-border	">
+            <aside class="flex items-center justify-center p-4 bg-shape-background box-border md:h-screen">
+
+                <div class="flex flex-col w-full py-10 px-8 bg-shape-body rounded-xl bg-[url('../assets/Background.png')] h-150 bg-cover bg-bottom bg-no-repeat box-border md:h-full md:bg-contain">
+
                     <header>
+
                         <img class="mb-4 w-8" src="/assets/Logo.svg" alt="Logo festivo">
+
                         <h1 class="font-logo text-[2.5rem] text-pink" >Festivite</h1>
-                        <p class="font-body text-[1rem] ">Crie um convite digital para o seu evento</p>
+
+                        <p class="font-body text-[1rem] text-[var(--color-text-heading)] font-light">Crie um convite digital para o seu evento</p>
+
                     </header>
+
                 </div>
             </aside>
 
 
             <main>
-                <div class="main-container"> 
-                    <h1>Crie seu convite</h1>
+                <div class="flex flex-col mx-auto p-6 bg-shape-body h-auto md:h-screen md:overflow-y-auto md:p-20"> 
+
+                    <h1 class="font-heading text-3xl">Crie seu convite</h1>
 
 
 
@@ -39,24 +47,24 @@
                         <fieldset class="about-event">
 
                             <div class="event-wrapper">
-                                <img src="assets/icons/calendar.svg" alt="calendar">
+                                <img src="/assets/icons/calendar.svg" alt="calendar">
                                 <h2>Sobre o evento</h2>
                             </div>
 
                             <div>
                                 <h3>Título</h3>
-                                <input id="event-name" type="text" placeholder="Nome do evento">
+                                <input id="event-name" type="text" placeholder="Nome do evento" class="appearance-none">
                             </div>
 
                             <div class="date-wrapper">
                                 <div>
                                     <h3>Início</h3>
-                                    <input type="date" placeholder=", --:--">
+                                    <input class="appearance-none" type="date" placeholder=", --:--">
                                 </div>
                                 
                                 <div>
                                     <h3>Fim</h3>
-                                    <input type="date" placeholder=", --:--">
+                                    <input class="appearance-none" type="date" placeholder=", --:--">
                                 </div>
                             </div>
 
@@ -67,8 +75,8 @@
                                         <h3>Tipo</h3>
                                         <div class="opcoes-grupo">
 
-                                            <input type="radio" id="presencial" name="tipo" checked>
-                                            <input type="radio" id="online" name="tipo">
+                                            <input class="appearance-none" type="radio" id="presencial" name="tipo" checked>
+                                            <input class="appearance-none" type="radio" id="online" name="tipo">
 
                                             <div class="tipo-slider"></div>
 
@@ -111,7 +119,9 @@
 
                             <div class="text-area-wrapper">
                                 <h3>Descrição</h3>
-                                <textarea name="decription" id="decription" cols="30" rows="5" placeholder="Escreva sobre os detalhes do evento"></textarea>
+                                <textarea 
+                                class="appearance-none"
+                                name="decription" id="decription" cols="30" rows="5" placeholder="Escreva sobre os detalhes do evento"></textarea>
                             </div>
                         </fieldset>
 
@@ -122,7 +132,7 @@
                                 <section class="container-main">
 
                                     <div class="event-wrapper">
-                                        <img src="assets/icons/paintbrush-vertical.svg" alt="pincel">
+                                        <img src="/assets/icons/paintbrush-vertical.svg" alt="pincel">
                                         <h2>Personalização</h2>
                                     </div>    
 
@@ -168,7 +178,7 @@
                                         </label>
 
                                         <label for="Ciano" class="radio-wrapper cyan-radio">
-                                            <input name="color" id="Ciano" type="radio"/>
+                                            <input class="appearance-none" name="color" id="Ciano" type="radio"/>
                                         </label>
 
                                         </div>
@@ -179,62 +189,62 @@
                                 <h3>Tema do evento</h3>
                                 <div class="background-wrapper" >
                                     <figure class="party-image">
-                                        <img src="assets/background-partys/Image.png" alt="Aniversário">
+                                        <img src="/assets/background-partys/Image.png" alt="Aniversário">
                                         <h3>Aniversário</h3>
                                     </figure>
 
                                     <figure class="party-image">
-                                        <img src="assets/background-partys/Image-1.png" alt="Infantil">
+                                        <img src="/assets/background-partys/Image-1.png" alt="Infantil">
                                         <h3>Infantil</h3>
                                     </figure>
 
                                     <figure class="party-image">
-                                        <img src="assets/background-partys/Image-2.png" alt="Formatura">
+                                        <img src="/assets/background-partys/Image-2.png" alt="Formatura">
                                         <h3>Formatura</h3>
                                     </figure>
 
                                     <figure class="party-image">
-                                        <img src="assets/background-partys/Image-3.png" alt="Casamento">
+                                        <img src="/assets/background-partys/Image-3.png" alt="Casamento">
                                         <h3>Casamento</h3>
                                     </figure>
 
                                     <figure class="party-image">
-                                        <img src="assets/background-partys/Image-4.png" alt="Chá de bebê">
+                                        <img src="/assets/background-partys/Image-4.png" alt="Chá de bebê">
                                         <h3>Chá de bebê</h3>
                                     </figure>
 
                                     <figure class="party-image">
-                                        <img src="assets/background-partys/Image-5.png" alt="Chá de panela">
+                                        <img src="/assets/background-partys/Image-5.png" alt="Chá de panela">
                                         <h3>Chá de panela</h3>
                                     </figure>
 
                                     <figure class="party-image">
-                                        <img src="assets/background-partys/Image-6.png" alt="Carnaval">
+                                        <img src="/assets/background-partys/Image-6.png" alt="Carnaval">
                                         <h3>Carnaval</h3>
                                     </figure>
 
                                     <figure class="party-image">
-                                        <img src="assets/background-partys/Image-7.png" alt="Páscoa">
+                                        <img src="/assets/background-partys/Image-7.png" alt="Páscoa">
                                         <h3>Páscoa</h3>
                                     </figure>
 
                                     <figure class="party-image">
-                                        <img src="assets/background-partys/Image-8.png" alt="São João">
+                                        <img src="/assets/background-partys/Image-8.png" alt="São João">
                                         <h3>São João</h3>
                                     </figure>
 
                                     <figure class="party-image">
-                                        <img src="assets/background-partys/Image-9.png" alt="Halloween">
+                                        <img src="/assets/background-partys/Image-9.png" alt="Halloween">
                                         <h3>Halloween</h3>
                                     </figure>
 
                                     <figure class="party-image">
-                                        <img src="assets/background-partys/Image-10.png" alt="Natal">
+                                        <img src="/assets/background-partys/Image-10.png" alt="Natal">
                                         <h3>Natal</h3>
                                     </figure>
 
                                     <figure class="party-image">
-                                        <img src="assets/background-partys/Image-11.png" alt="Outro">
+                                        <img src="/assets/background-partys/Image-11.png" alt="Outro">
                                         <h3>Outro</h3>
                                     </figure>
                                 </div>
@@ -246,7 +256,7 @@
                                     <h3>Estilo</h3>
                                     <div class="switch-wrapper">
 
-                                        <input type="checkbox" id="theme-switch">
+                                        <input class="appearance-none" type="checkbox" id="theme-switch">
 
                                         <label for="theme-switch" class="switch">
                                             <span class="slider"></span>
@@ -264,11 +274,12 @@
                                     <h3>Foto de capa</h3>
                                     
                                     <label for="cover" class="upload-button">
-                                        <img src="assets/icons/upload.svg" alt="upload">
+                                        <img src="/assets/icons/upload.svg" alt="upload">
                                         Selecionar
                                     </label>
 
                                     <input
+                                        class="appearance-none"
                                         type="file"
                                         id="cover"
                                         name="cover"
@@ -284,29 +295,29 @@
 
                         <fieldset>
                             <div class="contacts-wrapper">
-                                <img src="assets/icons/contact.svg" alt="contato">
+                                <img src="/assets/icons/contact.svg" alt="contato">
                                 <h2>Dados para contato</h2>
                             </div>    
 
                             <div class="dados-pessoais-wrapper" >
                                 <div>
                                     <h3>Nome</h3>
-                                    <input type="text" placeholder="Nome completo" name="name" id="name" class="input-name" required>
+                                    <input type="text" placeholder="Nome completo" name="name" id="name" class="appearance-none" required>
 
                                     <div class="error">
-                                        <img src="assets/icons/circle-alert.svg" alt="alerta vermelho">
+                                        <img src="/assets/icons/circle-alert.svg" alt="alerta vermelho">
                                         <span>Campo obrigatório</span>
                                     </div>
                                 </div>
                                 <div class="mail-phone">
                                     <div>
                                         <h3>E-mail</h3>
-                                        <input type="text" placeholder="exemplo@email.com" name="email" id="email">
+                                        <input class="appearance-none" type="text" placeholder="exemplo@email.com" name="email" id="email">
                                     </div>
 
                                     <div>
                                         <h3>Telefone</h3>
-                                        <input type="text" placeholder="(99) 99999-9999 " name="phone" id="phone">
+                                        <input class="appearance-none" type="text" placeholder="(99) 99999-9999 " name="phone" id="phone">
                                     </div>    
                                 </div>
                             </div>
@@ -317,13 +328,13 @@
                         <div class="checkbox-wrapper" >
                             <div class="terms checkbox">
                                 <div class="checkbox-image"></div>
-                                <input type="checkbox" name="termos" id="termos">
+                                <input class="appearance-none" type="checkbox" name="termos" id="termos">
                                 <label>Li e concordo com os<span> Termos e Condições</span> e com a <span>Política de Privacidade</span></label>
                             </div>
 
                             <div class="terms checkbox">
                                 <div class="checkbox-image"></div>
-                                <input type="checkbox" name="termos" id="termos">
+                                <input class="appearance-none" type="checkbox" name="termos" id="termos">
                                 <label>Aceito receber atualizações e promoções por e-mail</label>
                             </div>
 
@@ -337,7 +348,7 @@
                         <div class="button-submit">
                             
                             <button class="submit" type="submit">
-                                <img src="assets/icons/ticket.svg" alt="ticket">
+                                <img src="/assets/icons/ticket.svg" alt="ticket">
                                 Gerar convite
                             </button>
                         </div>

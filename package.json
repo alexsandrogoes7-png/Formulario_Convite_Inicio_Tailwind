@@ -4,7 +4,8 @@
   "description": "1. **Desafio 01:** Recriar a interface do *Festivite* (Formulário de Convite) utilizando Tailwind CSS.\r 2. **Desafio 02:** Desenvolver a Landing Page (LP) de um Clube de Assinatura, focando na aplicação de animações com Tailwind.\r 3. **Desafio 03:** Finalizar os detalhes e interações avançadas do desafio da LP do Clube de Assinatura.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
   },
   "repository": {
     "type": "git",
