@@ -41,3 +41,30 @@
   --color-text-body: #C8CDD0;
   --color-text-heading: #F9F9F9;
 }
+
+
+fieldset{
+  @apply grid border-none gap-6 m-0 p-0}
+
+
+h3{
+  @apply font-body font-normal text-[0.875rem] leading-[1.4] text-text-body mb-3;
+}
+
+input,textarea,select{
+
+ 
+  @apply flex w-full shrink appearance-none;
+
+
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  outline: 1px solid var(--color-input-stroke);
+  padding: 0.75rem 1rem;
+  color: var(--color-input-stroke);
+  background-color: var(--color-input-base);
+  font: var(--font-body);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4;
+}
