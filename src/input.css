@@ -65,3 +65,69 @@ input,textarea,select{
 .input-radio{
  @apply cursor-pointer appearance-none bg-current w-[2.5rem] h-[2.5rem] m-0 border-4 border-shape-button rounded-full;
 }
+
+.party-image {
+  @apply flex flex-col items-center bg-shape-button gap-2 border border-input-stroke rounded-lg p-1 cursor-pointer hover:border-brand-light hover:border-2 checked:border-brand-light hover:bg-shape-hover
+}
+
+.party-image img {
+  @apply w-full object-cover rounded-lg mb-3;
+}
+
+.party-image h3 {
+  @apply font-body font-normal text-sm leading-normal text-text-heading m-0 ;
+}
+
+.estilo-wrapper{
+  @apply flex flex-col
+}
+
+input[type="file"]{
+  @apply hidden
+}
+
+.light-text{
+  @apply hidden
+}
+
+
+.dark-text {
+  @apply inline; 
+}
+
+#theme-switch:checked ~ .theme-text .dark-text{
+  @apply hidden
+}
+
+#theme-switch:checked ~ .theme-text .light-text{
+  @apply inline
+}
+
+.switch-wrapper{
+  @apply flex items-center gap-3;
+
+  span{
+    @apply text-text-heading font-body font-normal text-base;
+  }
+}
+
+#theme-switch{
+  @apply hidden
+}
+
+.switch{
+  @apply relative w-16 h-8 bg-input-base border border-input-stroke rounded-full cursor-pointer 
+}
+
+.switch .slider{
+  @apply absolute top-[3px] left-[3px] bg-input-stroke w-6 h-6 rounded-full transition-transform duration-300 ease-in-out
+
+}
+
+#theme-switch:checked + .switch{
+  @apply bg-brand-light
+}
+
+#theme-switch:checked + .switch .slider{
+  @apply translate-x-8 bg-text-heading
+}
