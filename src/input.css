@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url(colors.css);
 
 
 @theme {
@@ -39,8 +40,8 @@
   --color-shape-input:#2D3136;
 
 
-  --color-text-body: #C8CDD0;
-  --color-text-heading: #F9F9F9;
+  --color-body: #C8CDD0;
+  --color-heading: #F9F9F9;
 }
 
 
@@ -49,13 +50,13 @@ fieldset{
 
 
 h3{
-  @apply font-body font-normal text-[0.875rem] leading-[1.4] text-text-body mb-3;
+  @apply font-body font-normal text-[0.875rem] leading-[1.4] text-body mb-3;
 }
 
 input,textarea,select{
 
  
-  @apply flex w-full shrink appearance-none rounded-lg border border-transparent outline outline-input-stroke p-3 px-4 text-input-placeholder bg-input-base font-body font-normal text-base leading-[1.4] placeholder:text-input-placeholder; 
+  @apply flex w-full shrink appearance-none rounded-lg border border-transparent outline outline-input-stroke p-3 px-4  bg-input-base font-body  font-normal text-base leading-[1.4] placeholder:text-input-placeholder; 
 }
 
 .radio-wrapper{
@@ -63,8 +64,12 @@ input,textarea,select{
 }
 
 
-.input-radio{
- @apply cursor-pointer appearance-none bg-current w-[2.5rem] h-[2.5rem] m-0 border-4 border-shape-button rounded-full;
+.input-radio {
+  @apply cursor-pointer appearance-none bg-current w-10 h-10 m-0 border-4 border-shape-button rounded-full transition-all;
+
+
+    @apply checked:outline-2  checked:outline-brand-light;
+
 }
 
 .party-image {
@@ -76,7 +81,7 @@ input,textarea,select{
 }
 
 .party-image h3 {
-  @apply font-body font-normal text-sm leading-normal text-text-heading m-0 ;
+  @apply font-body font-normal text-sm leading-normal text-heading m-0 ;
 }
 
 .estilo-wrapper{
@@ -108,7 +113,7 @@ input[type="file"]{
   @apply flex items-center gap-3;
 
   span{
-    @apply text-text-heading font-body font-normal text-base;
+    @apply text-heading font-body font-normal text-base;
   }
 }
 
@@ -130,7 +135,7 @@ input[type="file"]{
 }
 
 #theme-switch:checked + .switch .slider{
-  @apply translate-x-8 bg-text-heading
+  @apply translate-x-8 text-heading
 }
 
 .terms{
@@ -150,20 +155,21 @@ input[type="file"]{
   @apply relative;
 
   & input[type="checkbox"]{
-    @apply appearance-none absolute inset-0 m-0 p-0 cursor-pointer;
+    @apply appearance-none absolute opacity-0 inset-0 m-0 p-0 cursor-pointer;
   }
 
   .checkbox-image {
-    @apply shrink-0 w-5 h-5;
-    background-image: url(/assets/icons/box-default.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
+    @apply shrink-0 w-5 h-5 bg-[url(/assets/icons/box-default.svg)] bg-contain bg-no-repeat;
   }
 
 
   &:has(:checked) .checkbox-image {
-    background-image: url(/assets/icons/box-hover.svg);
+    @apply bg-[url(/assets/icons/box-hover.svg)];
   }
+}
+
+.terms-text{
+  @apply text-body font-body text-sm font-normal;
 }
 
 

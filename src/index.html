@@ -16,7 +16,7 @@
 
 </head>
 <body class="p-0 m-0 box-border" >
-        <div class="grid grid-cols-1 justify-center h-auto bg-shape-body md:grid-cols-[400px_1fr] md:h-screen md:overflow-hidden">
+        <div class="md:grid contain-content items-center justify-center h-auto bg-shape-body md:grid-cols-[400px_1fr] md:h-screen md:overflow-hidden">
 
             <aside class="flex items-center justify-center p-4 bg-shape-background box-border md:h-screen">
 
@@ -28,7 +28,7 @@
 
                         <h1 class="font-logo text-[2.5rem] text-pink" >Festivite</h1>
 
-                        <p class="font-body text-[1rem] text-[var(--color-text-heading)] font-light">Crie um convite digital para o seu evento</p>
+                        <p class="font-body text-[1rem] text-heading font-light">Crie um convite digital para o seu evento</p>
 
                     </header>
 
@@ -39,7 +39,7 @@
             <main class="bg-shape-body md:h-screen md:overflow-y-auto">
                 <div class="flex flex-col mx-auto p-6 max-w-[800px] md:py-20"> 
 
-                    <h1 class="flex font-heading font-extrabold text-3xl text-[var(--color-text-heading)] py-0 md:px-20 mb-10">Crie seu convite</h1>
+                    <h1 class="flex font-heading font-extrabold text-3xl text-heading py-0 md:px-20 mb-10">Crie seu convite</h1>
 
 
                     <form class="py-0 md:px-20" enctype="multipart/form-data" method="post">
@@ -47,7 +47,7 @@
 
                             <div class="flex gap-3">
                                 <img src="/assets/icons/calendar.svg" alt="calendar">
-                                <h2 class="font-heading text-text-heading font-extrabold text-[1.125rem] leading-[1.4]">Sobre o evento</h2>
+                                <h2 class="font-heading text-heading font-extrabold text-[1.125rem] leading-[1.4]">Sobre o evento</h2>
                             </div>
 
                             <div>
@@ -60,13 +60,13 @@
 
                             <div class="flex flex-col md:flex-row md:gap-4 shrink">
                                 <div class="w-full">
-                                    <h3>Início</h3>
-                                    <input class= "[&::-webkit-calendar-picker-indicator]:hidden [&::-moz-calendar-picker-indicator]:hidden" type="date" placeholder=", --:--">
+                                    <h3 class="" >Início</h3>
+                                    <input class= "[&::-webkit-calendar-picker-indicator]:hidden text-input-placeholder" type="date" placeholder=", --:--">
                                 </div>
                                 
                                 <div class="w-full">
                                     <h3>Fim</h3>
-                                    <input class="[&::-webkit-calendar-picker-indicator]:hidden [&::-moz-calendar-picker-indicator]:hidden" type="date" placeholder=", --:--">
+                                    <input class="[&::-webkit-calendar-picker-indicator]:hidden text-input-placeholder" type="date" placeholder=", --:--">
                                 </div>
                             </div>
 
@@ -82,7 +82,7 @@
 
                                             <div class="absolute"></div>
 
-                                            <label for="presencial" class="flex items-center justify-center gap-2 p-3 cursor-pointer text-text-body relative z-2 transition-colors duration-200 ease-in-out">
+                                            <label for="presencial" class="flex items-center justify-center gap-2 p-3 cursor-pointer text-body relative z-2 transition-colors duration-200 ease-in-out">
                                                 <input class="hidden" type="radio" id="presencial" name="tipo" checked>
                                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"        xmlns="http://www.w3.org/2000/svg">
                                                     <g clip-path="url(#clip0_4104_178)">
@@ -94,16 +94,16 @@
                                                     </clipPath>
                                                     </defs>
                                                 </svg>
-                                                <span class="m-0 text-text-body font-body font-normal text-sm leading-[1.4]">Presencial</span>
+                                                <span class="m-0 text-body font-body font-normal text-sm leading-[1.4]">Presencial</span>
                                             </label>
 
-                                            <label for="online" class="flex items-center justify-center gap-2 p-3 cursor-pointer text-text-body relative z-2 transition-colors duration-200 ease-in-out">
+                                            <label for="online" class="flex items-center justify-center gap-2 p-3 cursor-pointer text-body relative z-2 transition-colors duration-200 ease-in-out">
                                                 <input class="hidden" type="radio" id="online" name="tipo">
                                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M2.66671 4.5C2.20647 4.5 1.83337 4.8731 1.83337 5.33333V10.6667C1.83337 11.1269 2.20647 11.5 2.66671 11.5H9.33337C9.79361 11.5 10.1667 11.1269 10.1667 10.6667V8.6735C10.1666 8.66864 10.1666 8.66378 10.1667 8.65892V7.00949C10.1666 7.00347 10.1666 6.99746 10.1667 6.99145V5.33333C10.1667 4.8731 9.79361 4.5 9.33337 4.5H2.66671ZM11.1667 6.12939V5.33333C11.1667 4.32081 10.3459 3.5 9.33337 3.5H2.66671C1.65419 3.5 0.833374 4.32081 0.833374 5.33333V10.6667C0.833374 11.6792 1.65419 12.5 2.66671 12.5H9.33337C10.3459 12.5 11.1667 11.6792 11.1667 10.6667V9.60093L13.8717 11.4043C13.9972 11.4878 14.143 11.5357 14.2936 11.5429C14.4441 11.5501 14.5938 11.5163 14.7267 11.4452C14.8596 11.374 14.9707 11.2682 15.0482 11.1389C15.1257 11.0096 15.1666 10.8617 15.1667 10.7109V5.24681C15.1667 5.24686 15.1667 5.24677 15.1667 5.24681C15.1667 5.10024 15.1281 4.9561 15.0547 4.82923C14.9812 4.70231 14.8756 4.59702 14.7485 4.52398C14.6213 4.45094 14.4772 4.41274 14.3305 4.41324C14.1839 4.41374 14.04 4.45291 13.9134 4.52681L11.1667 6.12939ZM11.1667 7.28715V8.39908L14.1667 10.3991V5.53677L11.1667 7.28715Z" fill="currentColor"/>
                                                 </svg>
 
-                                                <span class="m-0 text-text-body font-body font-normal text-sm leading-[1.4]">Online</span>
+                                                <span class="m-0 text-body font-body font-normal text-sm leading-[1.4]">Online</span>
                                             </label>
 
                                         </div>
@@ -135,55 +135,60 @@
 
                                     <div class="flex gap-3 mb-6">
                                         <img src="/assets/icons/paintbrush-vertical.svg" alt="pincel">
-                                        <h2 class="font-heading text-text-heading font-extrabold text-[1.125rem] leading-[1.4]">Personalização</h2>
+                                        <h2 class="font-heading text-heading font-extrabold text-[1.125rem] leading-[1.4]">Personalização</h2>
                                     </div>    
 
-                                    <h3>Cor principal</h3>
+                                 
+                                    <h3 class="" >Cor principal</h3>
                                     
-                                    <div class="flex flex-col gap-4">
+
+                                    <div class="flex md:flex-col gap-4">
                                         
-                                        <div class="flex gap-8">
+                                        <div class="flex gap-8 justify-center items-center">
 
-                                      
-                                        <label for="Azul" class="radio-wrapper blue-radio">
-                                            <input class="input-radio" name="color" id="Azul" type="radio"/>
-                                        </label>
+                                            <div class="flex flex-col md:flex-row gap-8 justify-center items-center">
+                                                <label for="Azul" class="radio-wrapper blue-radio text-brand-light">
+                                                    <input class="input-radio" name="color" id="Azul" type="radio"/>
+                                                </label>
 
-                                        <label for="Vermelho" class="radio-wrapper red-radio">
-                                            <input class="input-radio" name="color" id="Vermelho" type="radio"/>
-                                        </label>
+                                                <label for="Vermelho" class="radio-wrapper red-radio text-danger">
+                                                    <input class="input-radio" name="color" id="Vermelho" type="radio"/>
+                                                </label>
 
-                                        <label for="Laranja" class="radio-wrapper orange-radio">
-                                            <input class="input-radio" name="color" id="Laranja" type="radio"/>
-                                        </label>
+                                                <label for="Laranja" class="radio-wrapper orange-radio text-orange">
+                                                    <input class="input-radio" name="color" id="Laranja" type="radio"/>
+                                                </label>
 
-                                        <label for="Azul escuro" class="radio-wrapper navy-radio">
-                                            <input class="input-radio" name="color" id="Azul escuro" type="radio"/>
-                                        </label>
+                                                <label for="Azul escuro" class="radio-wrapper navy-radio text-navy">
+                                                    <input class="input-radio" name="color" id="Azul escuro" type="radio"/>
+                                                </label>
 
-                                        <label for="Roxo" class="radio-wrapper purple-radio">
-                                            <input class="input-radio" name="color" id="Roxo" type="radio"/>
-                                        </label>
+                                                <label for="Roxo" class="radio-wrapper purple-radio text-purple">
+                                                    <input class="input-radio" name="color" id="Roxo" type="radio"/>
+                                                </label>
+                                            </div>    
 
-                                        <label for="Rosa" class="radio-wrapper pink-radio">
-                                            <input class="input-radio" name="color" id="Rosa" type="radio"/>
-                                        </label>
+                                            <div class="flex flex-col md:flex-row gap-8">
+                                                <label for="Rosa" class="radio-wrapper pink-radio">
+                                                    <input class="input-radio text-pink" name="color" id="Rosa" type="radio"/>
+                                                </label>
 
-                                        <label for="Amarelo" class="radio-wrapper yellow-radio">
-                                            <input class="input-radio" name="color" id="Amarelo" type="radio"/>
-                                        </label>
+                                                <label for="Amarelo" class="radio-wrapper yellow-radio text-yellow">
+                                                    <input class="input-radio" name="color" id="Amarelo" type="radio"/>
+                                                </label>
 
-                                        <label for="Lima" class="radio-wrapper lime-radio">
-                                            <input class="input-radio" name="color" id="Lima" type="radio"/>
-                                        </label>
+                                                <label for="Lima" class="radio-wrapper lime-radio">
+                                                    <input class="input-radio text-lime" name="color" id="Lima" type="radio"/>
+                                                </label>
 
-                                        <label for="Verde" class="radio-wrapper green-radio">
-                                            <input class="input-radio" name="color" id="Verde" type="radio"/>
-                                        </label>
+                                                <label for="Verde" class="radio-wrapper green-radio text-green">
+                                                    <input class="input-radio" name="color" id="Verde" type="radio"/>
+                                                </label>
 
-                                        <label for="Ciano" class="radio-wrapper cyan-radio">
-                                            <input class="input-radio" name="color" id="Ciano" type="radio"/>
-                                        </label>
+                                                <label for="Ciano" class="radio-wrapper cyan-radio text-cyan">
+                                                    <input class="input-radio" name="color" id="Ciano" type="radio"/>
+                                                </label>
+                                            </div>    
 
                                         </div>
                                     </div>
@@ -191,66 +196,71 @@
 
 
                                 <h3 class="mt-7">Tema do evento</h3>
-                                <div class="grid grid-cols-4 gap-3 mt-4">
-                                    <figure class="party-image">
-                                        <img src="/assets/background-partys/Image.png" alt="Aniversário">
-                                        <h3>Aniversário</h3>
-                                    </figure>
+                                <div class="grid md:grid-cols-4 grid-cols-6 gap-3 mt-4">
 
-                                    <figure class="party-image">
-                                        <img class="w-full rounded-sm" src="/assets/background-partys/Image-1.png" alt="Infantil">
-                                        <h3>Infantil</h3>
-                                    </figure>
+                                        
+                                            <figure class="party-image">
+                                                <img src="/assets/background-partys/Image.png" alt="Aniversário">
+                                                <h3>Aniversário</h3>
+                                            </figure>
 
-                                    <figure class="party-image">
-                                        <img src="/assets/background-partys/Image-2.png" alt="Formatura">
-                                        <h3>Formatura</h3>
-                                    </figure>
+                                            <figure class="party-image">
+                                                <img class="w-full rounded-sm" src="/assets/background-partys/Image-1.png" alt="Infantil">
+                                                <h3>Infantil</h3>
+                                            </figure>
 
-                                    <figure class="party-image">
-                                        <img src="/assets/background-partys/Image-3.png" alt="Casamento">
-                                        <h3>Casamento</h3>
-                                    </figure>
+                                            <figure class="party-image">
+                                                <img src="/assets/background-partys/Image-2.png" alt="Formatura">
+                                                <h3>Formatura</h3>
+                                            </figure>
 
-                                    <figure class="party-image">
-                                        <img src="/assets/background-partys/Image-4.png" alt="Chá de bebê">
-                                        <h3>Chá de bebê</h3>
-                                    </figure>
+                                            <figure class="party-image">
+                                                <img src="/assets/background-partys/Image-3.png" alt="Casamento">
+                                                <h3>Casamento</h3>
+                                            </figure>
 
-                                    <figure class="party-image">
-                                        <img src="/assets/background-partys/Image-5.png" alt="Chá de panela">
-                                        <h3>Chá de panela</h3>
-                                    </figure>
+                                            <figure class="party-image">
+                                                <img src="/assets/background-partys/Image-4.png" alt="Chá de bebê">
+                                                <h3>Chá de bebê</h3>
+                                            </figure>
 
-                                    <figure class="party-image">
-                                        <img src="/assets/background-partys/Image-6.png" alt="Carnaval">
-                                        <h3>Carnaval</h3>
-                                    </figure>
+                                            <figure class="party-image">
+                                                <img src="/assets/background-partys/Image-5.png" alt="Chá de panela">
+                                                <h3>Chá de panela</h3>
+                                            </figure>
 
-                                    <figure class="party-image">
-                                        <img src="/assets/background-partys/Image-7.png" alt="Páscoa">
-                                        <h3 class="">Páscoa</h3>
-                                    </figure>
+                                            <figure class="party-image">
+                                                <img src="/assets/background-partys/Image-6.png" alt="Carnaval">
+                                                <h3>Carnaval</h3>
+                                            </figure>
+                                           
 
-                                    <figure class="party-image">
-                                        <img src="/assets/background-partys/Image-8.png" alt="São João">
-                                        <h3>São João</h3>
-                                    </figure>
+                                        
+                                            <figure class="party-image">
+                                                <img src="/assets/background-partys/Image-7.png" alt="Páscoa">
+                                                <h3 class="">Páscoa</h3>
+                                            </figure>
 
-                                    <figure class="party-image">
-                                        <img src="/assets/background-partys/Image-9.png" alt="Halloween">
-                                        <h3>Halloween</h3>
-                                    </figure>
+                                            <figure class="party-image">
+                                                <img src="/assets/background-partys/Image-8.png" alt="São João">
+                                                <h3>São João</h3>
+                                            </figure>
 
-                                    <figure class="party-image">
-                                        <img src="/assets/background-partys/Image-10.png" alt="Natal">
-                                        <h3>Natal</h3>
-                                    </figure>
+                                            <figure class="party-image">
+                                                <img src="/assets/background-partys/Image-9.png" alt="Halloween">
+                                                <h3>Halloween</h3>
+                                            </figure>
 
-                                    <figure class="party-image">
-                                        <img src="/assets/background-partys/Image-11.png" alt="Outro">
-                                        <h3>Outro</h3>
-                                    </figure>
+                                            <figure class="party-image">
+                                                <img src="/assets/background-partys/Image-10.png" alt="Natal">
+                                                <h3>Natal</h3>
+                                            </figure>
+
+                                            <figure class="party-image">
+                                                <img src="/assets/background-partys/Image-11.png" alt="Outro">
+                                                <h3>Outro</h3>
+                                            </figure>
+                                         
                                 </div>
                             </div>
 
@@ -267,20 +277,20 @@
                                         </label>
 
                                         <span class="theme-text">
-                                            <span class="dark-text">Escuro</span>
-                                            <span class="light-text">Claro</span>
+                                            <span class="dark-text text-heading">Escuro</span>
+                                            <span class="light-text text-heading">Claro</span>
                                         </span>
 
                                     </div>
                                 </div> 
 
-                                <div class="foto-wrapper">
+                                <div class="foto-wrapper contain-content">
                                     <h3>Foto de capa</h3>
                                     
-                                    <div class="flex gap-3 items-center">
+                                    <div class="flex gap-1 md:gap-3 items-center">
 
                                             <div class="flex items-center justify-center">
-                                                <label for="cover" class="upload-button flex cursor-pointer bg-shape-input rounded-lg gap-2 items-center px-3 py-2 text-text-heading  font-normal font-body text-sm hover:bg-shape-hover">
+                                                <label for="cover" class="upload-button flex cursor-pointer bg-shape-input rounded-lg gap-2 items-center px-3 py-2 text-heading  font-normal font-body text-sm hover:bg-shape-hover">
                                                     <img class="" src="/assets/icons/upload.svg" alt="upload">
                                                     Selecionar
                                                 </label>
@@ -304,9 +314,9 @@
                         </fieldset>
 
                         <fieldset>
-                            <div class="contacts-wrapper flex gap-2 mt-4">
+                            <div class="contacts-wrapper flex gap-2 mt-12">
                                 <img src="/assets/icons/contact.svg" alt="contato">
-                                <h2 class="font-heading text-text-heading font-extrabold text-[1.025rem] leading-[1.4]">Dados para contato</h2>
+                                <h2 class="font-heading text-heading font-extrabold text-[1.025rem] leading-[1.4]">Dados para contato</h2>
                             </div>    
 
                             <div class="dados-pessoais-wrapper" >
@@ -337,29 +347,28 @@
 
                         <div class="separator w-full h-px bg-input-stroke "></div>
 
-                        <div class="checkbox-wrapper mt-12" >
+                        <div class="checkbox-wrapper mt-12 flex flex-col gap-3" >
                             <div class="terms checkbox">
                                 <div class="checkbox-image"></div>
                                 <input class="[all:unset]" type="checkbox" name="termos" id="termos">
-                                <label>Li e concordo com os<span> Termos e Condições</span> e com a <span>Política de Privacidade</span></label>
+                                <label class="terms-text">Li e concordo com os<span> Termos e Condições</span> e com a <span>Política de Privacidade</span></label>
                             </div>  
 
                             <div class="terms checkbox">
                                 <div class="checkbox-image"></div>
                                 <input class="[all:unset]" type="checkbox" name="termos" id="termos">
-                                <label>Aceito receber atualizações e promoções por e-mail</label>
+                                <label class="terms-text">Aceito receber atualizações e promoções por e-mail</label>
                             </div>
 
                             <div class="terms checkbox">
                                 <div class="checkbox-image"></div>
                                 <input class="[all:unset]" type="checkbox" name="termos" id="termos">
-                                <label>Aceito receber atualizações e promoções por SMS</label>
+                                <label class="terms-text">Aceito receber atualizações e promoções por SMS</label>
                             </div>
                         </div>
 
-                        <div class="button-submit">
-                            
-                            <button class="submit" type="submit">
+                        <div class="button-submit mt-12 flex justify-end  ">
+                            <button class="submit flex items-center gap-3 px-5 py-2 bg-brand-dark text-heading font-body font-semibold text-base rounded-lg hover:bg-brand-mid cursor-pointer" type="submit">
                                 <img src="/assets/icons/ticket.svg" alt="ticket">
                                 Gerar convite
                             </button>
