@@ -73,11 +73,11 @@ input,textarea,select{
 }
 
 .party-image {
-  @apply flex flex-col items-center bg-shape-button gap-2 border border-input-stroke rounded-lg p-1 cursor-pointer hover:border-brand-light hover:border-2 checked:border-brand-light hover:bg-shape-hover
+  @apply flex flex-col items-center bg-shape-button gap-2 border border-input-stroke rounded-lg p-1 cursor-pointer hover:border-brand-light hover:border-2 checked:border-2 checked:border-brand-light hover:bg-shape-hover
 }
 
 .party-image img {
-  @apply w-full object-cover rounded-lg mb-3;
+  @apply w-full object-cover rounded-lg mb-1 md:mb-3;
 }
 
 .party-image h3 {
